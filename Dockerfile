@@ -1,5 +1,6 @@
 # -------- BUILD STAGE --------
-FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+
 WORKDIR /app
 
 # Copy project file and restore
