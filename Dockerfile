@@ -12,7 +12,7 @@ COPY . ./
 RUN dotnet publish -c Release -o out
 
 # -------- RUNTIME STAGE --------
-FROM mcr.microsoft.com/dotnet/aspnet:7.0
+FROM mcr.microsoft.com/dotnet/aspnet:8.0  # Chỉnh sửa phiên bản cho phù hợp
 WORKDIR /app
 COPY --from=build /app/out ./
-ENTRYPOINT ["dotnet", "Photoez.dll"]
+ENTRYPOINT ["dotnet", "aaa.dll"]
